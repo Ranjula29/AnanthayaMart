@@ -47,20 +47,20 @@ public class addflowers extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_product);
+        setContentView(R.layout.add_flower);
 
 
         CategoryName = getIntent().getExtras().get("category").toString();
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Image");
-        ProductRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        ProductRef = FirebaseDatabase.getInstance().getReference().child("Products/flower");
 
         Toast.makeText(this, CategoryName, Toast.LENGTH_SHORT).show();
 
-        addProduct = (Button) findViewById(R.id.add_button);
-        inputImage = (ImageView) findViewById(R.id.add_image);
-        inputName = (EditText) findViewById(R.id.product_name);
-        inputDescription = (EditText) findViewById(R.id.product_Description);
-        inputPrice = (EditText) findViewById(R.id.product_Price);
+        addProduct = (Button) findViewById(R.id.add_buttonf);
+        inputImage = (ImageView) findViewById(R.id.add_imagef);
+        inputName = (EditText) findViewById(R.id.product_namef);
+        inputDescription = (EditText) findViewById(R.id.product_Descriptionf);
+        inputPrice = (EditText) findViewById(R.id.product_Pricef);
 
 
         inputImage.setOnClickListener(new View.OnClickListener() {

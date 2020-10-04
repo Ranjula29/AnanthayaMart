@@ -2,13 +2,12 @@ package com.example.app2;
 
 public class Order {
      private String orderid, orderproduct, address, contact,amount,delivery_note;
-     private String quantity;
+     private String quantity,date,time;
      public Order(){
 
      }
 
-///
-    public Order(String orderid, String orderproduct, String address, String contact, String amount, String quantity, String delivery_note) {
+    public Order(String orderid, String orderproduct, String address, String contact, String amount, String quantity, String delivery_note,String date,String time) {
         this.orderid = orderid;
         this.orderproduct = orderproduct;
         this.address = address;
@@ -16,6 +15,24 @@ public class Order {
         this.amount = amount;
         this.quantity = quantity;
         this.delivery_note = delivery_note;
+        this.date = date;
+        this.time = time;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getOrderid() {

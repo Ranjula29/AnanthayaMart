@@ -1,5 +1,6 @@
 package com.example.app2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -7,10 +8,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomePage extends AppCompatActivity {
 
@@ -18,14 +21,50 @@ public class HomePage extends AppCompatActivity {
     private ImageView cake, flower, hampers, laptops;
     private  ImageView foods, child, watches, electric;
     ViewFlipper v_flip;
-    DrawerLayout drawerLayout;
-    Button profileBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        drawerLayout = findViewById(R.id.drawer_layout);
+
+        BottomNavigationView bottomNavigationView =(BottomNavigationView)findViewById(R.id.bottomnav);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_home);
+
+        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+            @Override
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.bottom_home:
+
+                    case R.id.bottom_order:
+                        startActivity(new Intent(getApplicationContext(),DeliveryStatusActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+
+
+                    case R.id.bottom_cart:
+                        startActivity(new Intent(getApplicationContext(),cake.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+
+                    case R.id.bottom_logout:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+
+                }
+            }
+        });
+
+
+
+
+
+
 
 
         cake = (ImageView) findViewById(R.id.admin_cake);
@@ -37,13 +76,6 @@ public class HomePage extends AppCompatActivity {
         watches = (ImageView) findViewById(R.id.watches);
         electric = (ImageView) findViewById(R.id.admin_electric);
 
-        profileBtn = (Button)findViewById(R.id.btnPro);
-        profileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomePage.this,ProfileActivity.class));
-            }
-        });
 
         flower.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,54 +119,6 @@ public class HomePage extends AppCompatActivity {
 
 
     }
-
-    public void ClickMenu(View view){
-
-        openDrawer(drawerLayout);
-    }
-
-    private static void openDrawer(DrawerLayout drawerLayout) {
-
-        drawerLayout.openDrawer(GravityCompat.START);
-    }
-
-    public void ClickLogo(View view){
-
-        closeDrawer(drawerLayout);
-    }
-
-    private static void closeDrawer(DrawerLayout drawerLayout) {
-
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
-    }
-
-    public void ClickHome(View view){
-
-        recreate();
-    }
-    public void ClickDashboard(View view)
-    {
-        redirectActivity(this,Hampers.class);
-    }
-
-    public static void redirectActivity(Activity activity, Class aClass) {
-
-        Intent intent = new Intent(activity,aClass);
-
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        activity.startActivity(intent);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        closeDrawer(drawerLayout);
-    }
-
 
 
 

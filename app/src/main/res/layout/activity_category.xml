@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/productbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="AnanthayaMart"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeadd"
+            android:src="@drawable/home_24"
+            android:layout_marginEnd="380dp"
+            android:layout_marginTop="10dp">
+
+        </ImageView>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarperson"
+            android:src="@drawable/toolbarperson"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="10dp">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/add_product"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Add New Product"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+
+    <LinearLayout
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/add_product"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="45dp">
+
+
+        <ImageView
+            android:id="@+id/admin_cake"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/cake"
+            android:layout_marginStart="15dp"/>
+
+
+
+        <ImageView
+            android:id="@+id/admin_flower"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/flower"
+            android:layout_marginStart="15dp"/>
+
+
+
+        <ImageView
+            android:id="@+id/admin_hampers"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/hampers"
+            android:layout_marginStart="15dp"/>
+
+
+        <ImageView
+            android:id="@+id/admin_laptop"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/laptops"
+            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/category2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/category"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="45dp">
+
+
+        <ImageView
+            android:id="@+id/admin_food"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/foods"
+            android:layout_marginStart="15dp"/>
+
+        <ImageView
+            android:id="@+id/admin_baby"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/child"
+            android:layout_marginStart="15dp"/>
+
+
+
+        <ImageView
+            android:id="@+id/watches"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/watches"
+            android:layout_marginStart="15dp"/>
+
+        <ImageView
+            android:id="@+id/admin_electric"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/power"
+            android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="450dp">
+
+       <Button
+           android:id="@+id/productmnBtn"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="PRODUCT Manage"
+           android:textColor="@color/black"
+           android:background="@drawable/box"
+           android:layout_marginStart="80dp"
+           android:layout_marginEnd="80dp"/>
+        <Button
+            android:id="@+id/invenbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INVENTORY MANAGE"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:background="@drawable/box2"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

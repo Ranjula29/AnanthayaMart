@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductEditActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:id="@+id/edit_image"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_image_24"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_editname"
+            android:inputType="textImeMultiLine"
+            android:layout_below="@+id/edit_image"
+            android:layout_marginTop="40dp"
+            android:padding="20dp"
+            android:hint=""
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_editdescription"
+            android:layout_below="@+id/product_editprice"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="6dp"
+            android:padding="20dp"
+            android:hint=""
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_editname"
+            android:id="@+id/product_editprice"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="6dp"
+            android:padding="20dp"
+            android:hint="Product Price.."
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/upadte_button"
+            android:layout_below="@+id/product_editdescription"
+            android:text="Upadate"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:padding="17dp"
+            android:layout_marginTop="40dp"
+            android:textSize="18sp"
+            android:textAllCaps="true"/>
+    </RelativeLayout>
+
+
+</ScrollView>

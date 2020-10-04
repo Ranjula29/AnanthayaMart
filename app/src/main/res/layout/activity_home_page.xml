@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".HomePage">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_toolbar"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorAccent">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/search"
+            android:orientation="horizontal"
+            android:background="@color/themeColor">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_24"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                >
+
+            </ImageView>
+
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:hint="Search Here.."
+                android:textAlignment="center"
+                android:background="@drawable/rounded"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                >
+
+
+            </EditText>
+
+
+        </LinearLayout>
+
+
+
+        <ViewFlipper
+            android:id="@+id/v_flip"
+            android:layout_below="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.09"
+            tools:layout_editor_absoluteX="0dp">
+
+
+        </ViewFlipper>
+
+        <TextView
+            android:layout_below="@+id/v_flip"
+            android:id="@+id/add_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Categories"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/add_product"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:id="@+id/admin_cake"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/cake4"
+
+                />
+
+
+
+            <ImageView
+                android:id="@+id/admin_flower"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/flower4"
+                android:layout_marginStart="30dp"/>
+
+
+
+            <ImageView
+                android:id="@+id/admin_hampers"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/gift"
+                android:layout_marginStart="30dp"/>
+
+
+            <ImageView
+                android:id="@+id/admin_laptop"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/laptop"
+                android:layout_marginStart="15dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/namepanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/category"
+            android:layout_marginTop="3dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cake"
+                android:textSize="24sp"
+                android:layout_marginStart="50dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cake"
+                android:layout_marginStart="42dp"
+                android:textSize="24sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cake"
+                android:layout_marginStart="42dp"
+                android:textSize="24sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cake"
+                android:layout_marginStart="32dp"
+                android:textSize="24sp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/category2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/namepanel"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:id="@+id/admin_food"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/hamburger"
+                />
+
+            <ImageView
+                android:id="@+id/admin_baby"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/child4"
+                android:layout_marginStart="30dp"/>
+
+
+
+            <ImageView
+                android:id="@+id/watches"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/watch4"
+                android:layout_marginStart="30dp"/>
+
+            <ImageView
+                android:id="@+id/admin_electric"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/electrical"
+                android:layout_marginStart="15dp"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

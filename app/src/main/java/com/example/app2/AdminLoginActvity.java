@@ -25,7 +25,7 @@ public class AdminLoginActvity extends AppCompatActivity  implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login_actvity);
-
+//////
 
         e_mail = findViewById(R.id.email);
         pwd = findViewById(R.id.password);

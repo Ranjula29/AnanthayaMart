@@ -19,9 +19,6 @@
             layout="@layout/main_toolbar"/>
 
 
-
-
-
     </LinearLayout>
 
 
@@ -98,6 +95,11 @@
             tools:layout_editor_absoluteX="0dp">
 
 
+            <Button
+                android:id="@+id/btnPro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile" />
         </ViewFlipper>
 
         <TextView

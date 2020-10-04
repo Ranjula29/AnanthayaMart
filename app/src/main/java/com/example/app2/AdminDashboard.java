@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class AdminDashboard extends AppCompatActivity {
 
-    private Button productadding, productedit,viewhome,manageinventory;
+    private Button productadding, productedit,viewhome,manageinventory,adminLogoutBtn;
 
 
 
@@ -24,7 +26,7 @@ public class AdminDashboard extends AppCompatActivity {
         productedit =(Button)  findViewById(R.id.managingProduct);
         viewhome =(Button) findViewById(R.id.vistHome);
         manageinventory =(Button)  findViewById(R.id.managinginventory);
-
+        adminLogoutBtn = (Button) findViewById(R.id.btnLogoutAdmin) ;
 
 
 
@@ -49,6 +51,15 @@ public class AdminDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AdminDashboard.this,HomePage.class);
                 startActivity(intent);
+            }
+        });
+
+        adminLogoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(AdminDashboard.this,MainActivity.class));
             }
         });
 

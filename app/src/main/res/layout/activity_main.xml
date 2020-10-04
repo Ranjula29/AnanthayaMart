@@ -154,9 +154,10 @@
 
     <Button
         android:id="@+id/adminlogBtn"
-        android:layout_width="167dp"
-        android:layout_height="50dp"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
         android:text="Admin Login"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.498"

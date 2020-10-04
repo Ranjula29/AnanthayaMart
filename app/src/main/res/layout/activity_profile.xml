@@ -7,6 +7,17 @@
     tools:context=".ProfileActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="62dp"
+        android:layout_height="37dp"
+        android:background="@drawable/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/lname"
@@ -19,7 +30,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/fname"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.42" />
+
 
     <TextView
         android:id="@+id/textView3"
@@ -29,11 +41,10 @@
         android:textColor="#101010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047" />
-
 
     <TextView
         android:id="@+id/fname"
@@ -61,36 +72,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/contact"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577" />
+        app:layout_constraintVertical_bias="0.568" />
 
     <TextView
         android:id="@+id/profileAddress"
-        android:layout_width="174dp"
+        android:layout_width="200dp"
         android:layout_height="38dp"
+        android:background="@drawable/box"
         android:text="Your Address"
         app:layout_constraintBaseline_toBaselineOf="@+id/address"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        android:background="@drawable/box"
+        app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/profilePhone"
-        android:layout_width="174dp"
+        android:layout_width="200dp"
         android:layout_height="38dp"
         android:background="@drawable/box"
         android:text="Your Contact Number"
         app:layout_constraintBaseline_toBaselineOf="@+id/contact"
-        app:layout_constraintStart_toStartOf="@+id/profileEmail" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/profileLname"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
         android:background="@drawable/box"
-        android:layout_width="174dp"
-        android:layout_height="38dp"
         android:text="Your Last Name"
         app:layout_constraintBaseline_toBaselineOf="@+id/lname"
-        app:layout_constraintStart_toStartOf="@+id/profilePhone" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/address"
@@ -116,7 +131,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/lname"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintVertical_bias="0.497" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -133,21 +148,25 @@
 
     <TextView
         android:id="@+id/profileFname"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
         android:background="@drawable/box"
-        android:layout_width="174dp"
-        android:layout_height="38dp"
         android:text="Your First Name"
         app:layout_constraintBaseline_toBaselineOf="@+id/fname"
-        app:layout_constraintStart_toStartOf="@+id/profileLname" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/profileEmail"
-        android:layout_width="174dp"
+        android:layout_width="200dp"
         android:layout_height="38dp"
-        android:text="Your Email"
         android:background="@drawable/box"
+        android:text="Your Email"
         app:layout_constraintBaseline_toBaselineOf="@+id/mail"
-        app:layout_constraintStart_toStartOf="@+id/profileAddress" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/profileImage"

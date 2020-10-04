@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AdminDashboard"></activity>
+
+        <activity android:name=".FeedBackView" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".Signup" />
         <activity android:name=".manageProduct" />
         <activity android:name=".Hampers" />
         <activity android:name=".HomePage" />

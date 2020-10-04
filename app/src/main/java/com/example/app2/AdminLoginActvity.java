@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -17,24 +16,21 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class AdminLoginActvity extends AppCompatActivity  implements View.OnClickListener{
     EditText e_mail,pwd;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
-    Button btnAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_admin_login_actvity);
 
 
         e_mail = findViewById(R.id.email);
         pwd = findViewById(R.id.password);
         progressBar=findViewById(R.id.progressBar);
-        findViewById(R.id.btnREg).setOnClickListener(this);
         findViewById(R.id.btnLog).setOnClickListener(this);
-        findViewById(R.id.adminlogBtn).setOnClickListener(this);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -47,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onStart();
         if (mAuth.getCurrentUser() != null){
             finish();
-            startActivity(new Intent(this,HomePage.class));
+            startActivity(new Intent(AdminLoginActvity.this,AdminDashboard.class));
         }
 
     }
@@ -56,26 +52,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         switch (v.getId()){
-            case R.id.btnREg:
 
-                finish();
-                startActivity(new Intent(this, Signup.class));
-
-                break;
             case R.id.btnLog:
 
-                userLogin();
+                adminLogin();
 
                 break;
-
-            case R.id.adminlogBtn:
-
-                finish();
-                startActivity(new Intent(this, AdminLoginActvity.class));
-
-
-                break;
-
 
 
         }
@@ -84,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    private void userLogin() {
+    private void adminLogin() {
 
         String email = e_mail.getText().toString().trim();
         String password = pwd.getText().toString().trim();
@@ -121,8 +103,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (task.isSuccessful()){
                     finish();
-                    Toast.makeText(getApplicationContext(),"User Logged In Successfully",Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(getApplicationContext(),HomePage.class);
+                    Toast.makeText(getApplicationContext(),"Admin Logged In Successfully",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(getApplicationContext(),AdminDashboard.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }else{
@@ -131,6 +113,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
+
 
 
 }

@@ -129,4 +129,10 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnLogoutAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Logout" />
+
 </LinearLayout>

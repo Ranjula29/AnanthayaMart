@@ -22,8 +22,6 @@
     <string name="delivery_and_order_status">Delivery and Order Status</string>
 
 
-
-
     <string name="first">First Name:</string>
     <string name="last">Last Name:</string>
     <string name="phone">Phone Number:</string>
@@ -46,5 +44,6 @@
     <string name="feedValue">Feedback -:</string>
     <string name="btnEditReview">Change  Review</string>
     <string name="backProfileBtn">Back to profile</string>
-    <string name="sendReviebtn">Send feedback</string>`
+    <string name="sendReviebtn">Send feedback</string>
+    <string name="adminlogin">Admin Login</string>`
 </resources>

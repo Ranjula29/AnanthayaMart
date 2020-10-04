@@ -6,7 +6,7 @@ public class Order {
      public Order(){
 
      }
-
+///
     public Order(String orderid, String orderproduct, String address, String contact, String amount, String quantity, String delivery_note) {
         this.orderid = orderid;
         this.orderproduct = orderproduct;

@@ -39,18 +39,18 @@
           android:layout_marginTop="12dp"/>
 
 
-
         <EditText
+            android:id="@+id/order_editaddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/order_editaddress"
-            android:inputType="textImeMultiLine"
             android:layout_below="@id/txtaddress"
-            android:padding="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="45dp"
             android:background="@drawable/box"
             android:hint=""
-            android:layout_marginLeft="45dp"
-            android:layout_marginRight="45dp"/>
+            android:inputType="textImeMultiLine"
+            android:padding="20dp" />
 
         <TextView
             android:id="@+id/txtphone"
@@ -104,18 +104,18 @@
             android:layout_marginRight="45dp"/>
 
         <Button
+            android:id="@+id/update_buttonorder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/update_buttonorder"
             android:layout_below="@+id/order_editnote"
-            android:text="Upadate"
-            android:background="@color/green"
             android:layout_marginLeft="70dp"
+            android:layout_marginTop="49dp"
             android:layout_marginRight="70dp"
+            android:background="@color/green"
             android:padding="17dp"
-            android:layout_marginTop="40dp"
-            android:textSize="18sp"
-            android:textAllCaps="true"/>
+            android:text="Upadate"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
     </RelativeLayout>
 
 

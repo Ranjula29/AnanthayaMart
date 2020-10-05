@@ -42,6 +42,12 @@ public class HomePage extends AppCompatActivity {
                         finish();
                         overridePendingTransition(0,0);
                         return;
+
+                    case R.id.bottom_order:
+                        startActivity(new Intent(getApplicationContext(),DeliveryStatusActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
                 }
             }
         });

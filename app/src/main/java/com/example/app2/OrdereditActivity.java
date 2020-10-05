@@ -26,6 +26,7 @@ import java.util.HashMap;
 import javax.microedition.khronos.egl.EGLDisplay;
 
 public class OrdereditActivity extends AppCompatActivity {
+
 ///
     private EditText addressedit,phoneedit,noteedit;
     private Button updateButton2;

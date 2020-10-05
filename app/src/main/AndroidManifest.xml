@@ -13,8 +13,6 @@
         <activity android:name=".manageProduct" />
         <activity android:name=".Hampers" />
         <activity android:name=".HomePage" />
-        <activity android:name=".OrdereditActivity" />
-        <activity android:name=".DeliveryStatusActivity" />
         <activity android:name=".flower" />
         <activity android:name=".ProductdetailsActivity" />
         <activity android:name=".ProductEditActivity" />

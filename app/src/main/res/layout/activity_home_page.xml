@@ -4,32 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     tools:context=".HomePage">
- <RelativeLayout
-     android:id="@+id/namebar"
-     android:layout_width="match_parent"
-     android:layout_height="?actionBarSize">
 
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:text="AnanthayaMart"
-         android:textAlignment="center"
-         android:textColor="@color/black"
-         android:textSize="28sp"
-         android:background="@drawable/box3"
-         android:gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/head">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="AnanthayaMart"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:background="@drawable/box3"/>
 
 
-
-
- </RelativeLayout>
-
+    </RelativeLayout>
 
         <LinearLayout
+            android:layout_below="@+id/head"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@id/namebar"
             android:id="@+id/search"
             android:orientation="horizontal"
             android:background="@color/themeColor">
@@ -50,6 +49,7 @@
                 android:layout_width="250dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="4dp"
                 android:hint="Search Here.."
                 android:textAlignment="center"
                 android:background="@drawable/rounded"
@@ -134,8 +134,7 @@
                 android:layout_marginStart="15dp"/>
 
 
-
-        </LinearLayout>
+</LinearLayout>
 
 
         <LinearLayout
@@ -185,17 +184,24 @@
 
 
         </LinearLayout>
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottomnav"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:id="@+id/nevigation"
         android:background="@color/white"
-        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
         app:itemTextColor="@drawable/selector"
-        app:itemIconTint="@color/black"
-        app:menu="@menu/menu_button">
+        app:menu="@menu/menu_button"
+        app:itemIconTint="@drawable/selector"
+        android:layout_alignParentBottom="true">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-</RelativeLayout>
+
+
+    </RelativeLayout>
+
+

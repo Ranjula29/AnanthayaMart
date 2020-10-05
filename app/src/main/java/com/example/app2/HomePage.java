@@ -28,7 +28,7 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        BottomNavigationView bottomNavigationView =(BottomNavigationView)findViewById(R.id.bottomnav);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.nevigation);
         bottomNavigationView.setSelectedItemId(R.id.bottom_home);
 
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
@@ -37,31 +37,14 @@ public class HomePage extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.bottom_home:
 
-                    case R.id.bottom_order:
-                        startActivity(new Intent(getApplicationContext(),DeliveryStatusActivity.class));
-                        finish();
-                        overridePendingTransition(0,0);
-                        return;
-
-
-                    case R.id.bottom_cart:
-                        startActivity(new Intent(getApplicationContext(),cake.class));
-                        finish();
-                        overridePendingTransition(0,0);
-                        return;
-
                     case R.id.bottom_logout:
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         finish();
                         overridePendingTransition(0,0);
                         return;
-
                 }
             }
         });
-
-
-
 
 
 
@@ -119,6 +102,7 @@ public class HomePage extends AppCompatActivity {
 
 
     }
+
 
 
 

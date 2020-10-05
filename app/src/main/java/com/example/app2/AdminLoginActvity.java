@@ -35,7 +35,7 @@ public class AdminLoginActvity extends AppCompatActivity  implements View.OnClic
 
         mAuth = FirebaseAuth.getInstance();
 
-
+////
     }
 
     @Override
